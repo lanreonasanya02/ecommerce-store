@@ -1,0 +1,90 @@
+.product-card {
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  align-items: center;
+  padding: 5rem 3rem 0;
+}
+
+.product-card .product-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.product-card .product-image .thumbnails {
+  margin: 0;
+  padding: 0;
+}
+
+.product-card .product-image .thumbnails img {
+  width: 20%;
+}
+
+.product-card .product-details {
+  text-align: left;
+  padding: 0 5rem;
+}
+
+.product-card .product-details .product-brand {
+  color: hsl(26, 100%, 55%);
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 6px;
+  font-weight: 600;
+}
+
+.product-card .product-details .product-title {
+  font-size: 2.5rem;
+}
+
+.product-card .product-details .product-description,
+.product-card .product-details .product-price {
+  font-size: 1.2rem;
+  color: #7a7777;
+}
+
+.product-card .product-details .discountedprice {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.product-card .product-details .discount {
+  font-size: 15px;
+  color: hsl(26, 100%, 55%);
+  background-color: hsl(25, 100%, 94%);
+  margin-left: 8px;
+  padding: 5px 7px;
+  border-radius: 5px;
+}
+
+.product-card .product-details .buttons {
+  display: flex;
+}
+
+.product-card .product-details .buttons .btn-quantity button {
+  border: none;
+  background-color: hsl(223, 64%, 98%);
+  padding: 10px 12px;
+  color: hsl(26, 100%, 55%);
+  font-size: 1rem;
+}
+
+input {
+  width: 40%;
+  text-align: center;
+  background-color: hsl(223, 64%, 98%);
+  border: none;
+  padding: 11px 0;
+  outline: none;
+}
+
+.product-card .product-details .buttons .btn-addtocart button {
+  color: #fff;
+  background-color: hsl(26, 100%, 55%);
+  border-style: none;
+  padding: 10px 3rem;
+  border-radius: 8px;
+}
+
+.product-card .product-details .buttons .btn-addtocart .cart-text {
+  margin-left: 8px;
+}
