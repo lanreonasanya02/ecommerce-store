@@ -1,8 +1,17 @@
+.filter {
+  text-align: left;
+  padding-left: 3rem;
+}
+
+select {
+  outline: none;
+}
+
 .product-card {
   display: grid;
-  grid-template-columns: 450px 1fr;
+  grid-template-columns: 350px 1fr;
   align-items: center;
-  padding: 5rem 3rem 0;
+  padding: 5rem 3rem 2rem;
 }
 
 .product-card .product-image img {
@@ -88,3 +97,12 @@ input {
 .product-card .product-details .buttons .btn-addtocart .cart-text {
   margin-left: 8px;
 }
+
+/* @media (min-width: 1000px) {
+  .product-card {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    align-items: center;
+    padding: 5rem 3rem 0;
+  }
+} */
