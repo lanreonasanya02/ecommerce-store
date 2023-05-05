@@ -58,7 +58,7 @@ export const PRODUCTS = [
     title: "Air Jordan Sneakers",
     desc: "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.",
     price: 120.0,
-    discount: 7,
+    discount: 35,
     category: "Male",
   },
 
@@ -69,7 +69,7 @@ export const PRODUCTS = [
     title: "Air Jordan Fluffy Active Sneakers",
     desc: "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.",
     price: 270.0,
-    discount: 12,
+    discount: 85,
     category: "Female",
   },
 

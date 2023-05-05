@@ -1,4 +1,12 @@
 nav {
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  top: 0;
+  background-color: #fff;
+}
+
+nav .desktop-navbar {
   padding: 1.5rem 0;
   margin: 0 3rem;
   display: grid;
@@ -20,9 +28,12 @@ nav .navbar-cart {
   text-align: end;
 }
 
+nav .navbar-cart .cart-link {
+  margin-right: 2rem;
+}
+
 nav .navbar-cart .cart {
   color: #000;
-  margin-right: 2rem;
 }
 
 nav .navbar-links a:hover,
@@ -30,10 +41,18 @@ nav .navbar-cart .cart:hover {
   color: hsl(26, 100%, 55%);
 }
 
-/* Cart Quantity
-nav .navbar-cart .cart-amount {
-  margin-right: 1rem;
-  text-decoration: none;
-  color: #ff0000;
-  font-size: 10px;
-} */
+/* Cart Quantity */
+nav .navbar-cart .cart-basket {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  position: absolute;
+  top: 18px;
+  right: 90px;
+  width: 15px;
+  height: 15px;
+  color: #fff;
+  background-color: hsl(26, 100%, 55%);
+  border-radius: 50%;
+}
