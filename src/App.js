@@ -5,6 +5,7 @@ import About from "./components/about/About";
 import Cart from "./components/cart/Cart";
 import Navbar from "./components/navbar/Navbar";
 import Contact from "./components/contact/Contact";
+import ShopContextProvider from "./context/shop-context";
 
 function App() {
   return (
@@ -12,13 +13,15 @@ function App() {
       <Router>
         <Navbar />
         <div className="App">
-          <Routes>
-            <Route index element={<Collections />} />
-            <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="cart" element={<Cart />} />
-            // <Route path="login" element={<Cart />} />
-          </Routes>
+          <ShopContextProvider>
+            <Routes>
+              <Route index element={<Collections />} />
+              <Route path="about" element={<About />} />
+              <Route path="contact" element={<Contact />} />
+              <Route path="cart" element={<Cart />} />
+              {/* <Route path="login" element={<Login />} /> */}
+            </Routes>
+          </ShopContextProvider>
         </div>
       </Router>
     </>

@@ -24,8 +24,8 @@ option {
 .flash-sale {
   background: linear-gradient(
     to right,
-    rgba(246, 152, 165, 0.8),
-    rgba(120, 64, 78, 0.4)
+    hsla(26, 100%, 55%, 0.8),
+    hsla(25, 100%, 94%, 0.4)
   );
   color: #000;
   border-radius: 8px;
@@ -34,10 +34,11 @@ option {
 }
 
 .flash-sale > h1 {
-  color: hsl(26, 100%, 55%);
+  color: #ff0000;
   letter-spacing: 10px;
   font-weight: bolder;
-  font-size: 2.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
   animation: animate 1.8s linear infinite;
 }
 
@@ -116,9 +117,13 @@ option {
   grid-template-columns: 1fr 1fr;
 }
 
+.product-card .product-details .btn-quantity {
+  background: none;
+}
+
 .product-card .product-details .buttons .btn-quantity button {
   border: none;
-  background-color: hsl(223, 64%, 98%);
+  /* background-color: hsl(223, 64%, 98%); */
   padding: 10px 12px;
   color: hsl(26, 100%, 55%);
   font-size: 1rem;
@@ -126,18 +131,18 @@ option {
 }
 
 input {
-  width: 40%;
+  width: 20%;
   text-align: center;
-  background-color: hsl(223, 64%, 98%);
+  /* background-color: hsl(223, 64%, 98%); */
   border: none;
   padding: 12px 0;
   font-weight: bolder;
   outline: none;
 }
 
-.flash-sale .product-details .buttons .btn-quantity button,
+/* .flash-sale .product-details .buttons .btn-quantity button, */
 .flash-sale input {
-  background-color: rgba(246, 152, 165, 0.8);
+  background: none;
   color: #000;
 }
 
