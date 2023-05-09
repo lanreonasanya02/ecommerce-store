@@ -36,7 +36,7 @@ const CartItem = ({ data }) => {
       </div>
 
       <div className="cart-price">
-        <p>${newPrice * cartItems[id]}.00</p>
+        <p>${newPrice * cartItems[id]}</p>
       </div>
     </div>
   );

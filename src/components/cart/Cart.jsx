@@ -25,7 +25,7 @@ const Cart = () => {
         {totalAmount > 0 ? (
           <div className="total-amount">
             <h2>
-              Total Basket: <span>${totalAmount}</span>
+              Total Basket: <span>${Math.floor(totalAmount)}</span>
             </h2>
             <button onClick={() => navigate("/")}>Continue Shopping</button>
             <button>Checkout</button>

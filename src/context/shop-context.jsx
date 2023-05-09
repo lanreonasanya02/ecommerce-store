@@ -32,7 +32,7 @@ const ShopContextProvider = (props) => {
     let totalBasket = 0;
     for (const item in cartItems) {
       if (cartItems[item] > 0) {
-        let itemInfo = PRODUCTS.find((product) => product.id === Number(item));
+        PRODUCTS.find((product) => product.id === Number(item));
         totalBasket += cartItems[item];
       }
     }
