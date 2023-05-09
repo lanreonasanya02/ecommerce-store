@@ -5,6 +5,7 @@
 .cart-section h1 {
   margin-bottom: 3rem;
   font-size: 2rem;
+  color: hsl(26, 100%, 55%);
 }
 
 .cart-section .cart-menu {
@@ -39,6 +40,39 @@
 .close-window:hover,
 .remove-item:hover {
   color: #ff0000;
+}
+
+.cart-price {
+  font-weight: bold;
+}
+
+.total-amount {
+  color: hsl(26, 100%, 55%);
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+.total-amount span {
+  margin-left: 1rem;
+}
+
+.total-amount button {
+  color: #fff;
+  background-color: #3a3939;
+  border-style: none;
+  padding: 14px 3rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.total-amount > button {
+  margin-right: 1.5rem;
+}
+
+.total-amount button:hover {
+  color: #3a3939;
+  background-color: hsl(25, 100%, 94%);
+  font-weight: bold;
 }
 
 .hidden {

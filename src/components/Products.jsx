@@ -2,16 +2,12 @@ import React, { useContext } from "react";
 import { BsCart2 } from "react-icons/bs";
 import "./collections/Collections.css";
 import { ShopContext } from "../context/shop-context";
+import Navbar from "./navbar/Navbar";
 
 const Products = ({ data }) => {
   const { id, image, brand, title, desc, price, discount, category } = data;
-  const {
-    cartItems,
-    addToCart,
-    removeFromCart,
-    updateCartCountChange,
-    getGrandToTalAmount,
-  } = useContext(ShopContext);
+  const { cartItems, addToCart } = useContext(ShopContext);
+  const cartItemAmount = cartItems[id];
 
   const disocuntedPrice = price * (discount / 100);
   const newPrice = price - disocuntedPrice;
@@ -40,24 +36,12 @@ const Products = ({ data }) => {
             </p>
 
             <div className="buttons">
-              <div className="btn-quantity">
-                <button
-                  onClick={() => (cartItems[id] > 0 ? removeFromCart(id) : 0)}
-                >
-                  -
-                </button>
-                <input
-                  type="text"
-                  value={cartItems[id]}
-                  onChange={(e) => updateCartCountChange(e.target.value, id)}
-                />
-                <button onClick={() => addToCart(id)}>+</button>
-              </div>
-
               <div className="btn-addtocart">
                 <button onClick={() => addToCart(id)}>
                   <BsCart2 />
-                  <span className="cart-text">Add to cart</span>
+                  <span className="cart-text">
+                    Add to cart {cartItemAmount > 0 && <>({cartItemAmount})</>}
+                  </span>
                 </button>
               </div>
             </div>

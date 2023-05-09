@@ -15,6 +15,19 @@ const getDefaultCart = () => {
 const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
 
+  const getGrandTotalAmount = () => {
+    let totalAmount = 0;
+    for (const item in cartItems) {
+      if (cartItems[item] > 0) {
+        let itemInfo = PRODUCTS.find((product) => product.id === Number(item));
+        const discounted = itemInfo.price * (itemInfo.discount / 100);
+        const newPrice = itemInfo.price - discounted;
+        totalAmount += cartItems[item] * newPrice;
+      }
+    }
+    return totalAmount;
+  };
+
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
   };
@@ -27,29 +40,12 @@ const ShopContextProvider = (props) => {
     setCartItems((prev) => ({ ...prev, [itemId]: newCount }));
   };
 
-  const getGrandToTalAmount = () => {
-    let totalAmount = 0;
-    for (const item in cartItems) {
-      if (cartItems[item] > 0) {
-        let itemInfo = PRODUCTS.find((product) => product.id === Number(item));
-        totalAmount += cartItems[item] * itemInfo.price;
-      }
-
-      return totalAmount;
-    }
-  };
-
-  const deleteProduct = (itemId) => {
-    PRODUCTS.filter((product) => product.id !== itemId);
-  };
-
   const contextValue = {
     cartItems,
     addToCart,
     removeFromCart,
     updateCartCountChange,
-    getGrandToTalAmount,
-    deleteProduct,
+    getGrandTotalAmount,
   };
 
   // To define all the states and functions that will be used

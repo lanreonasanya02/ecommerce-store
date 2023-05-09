@@ -5,14 +5,10 @@ import "../navbar/Navbar.css";
 import { BsCart2 } from "react-icons/bs";
 import { FaUserCircle } from "react-icons/fa";
 // import { ShopContext } from "../../context/shop-context";
+// import { PRODUCTS } from "../../Products";
 
-const Navbar = ({ data }) => {
-  // const { id } = data;
+const Navbar = () => {
   // const { cartItems } = useContext(ShopContext);
-  // if (cartItems.id !== 0) {
-  //   const cartItemAmount = cartItems[id];
-  //   return cartItemAmount;
-  // }
 
   return (
     <nav>
@@ -31,7 +27,15 @@ const Navbar = ({ data }) => {
           <Link to="/cart" className="cart-link">
             <BsCart2 className="cart" />
             <span className="cart-basket">
-              0{/* {cartItems.id > 0 ? <>{cartItems[id]}</> : <>0</>} */}
+              {" "}
+              0
+              {/* {PRODUCTS.map((product) => {
+                if (cartItems[product.id] !== 0) {
+                  const { id } = product;
+                  const cartItemAmount = cartItems[id];
+                  return cartItemAmount > 0 && <>{cartItemAmount}</>;
+                }
+              })} */}
             </span>
           </Link>
           <FaUserCircle className="user" />

@@ -4,11 +4,12 @@ import "./Cart.css";
 import { BsTrash } from "react-icons/bs";
 
 const CartItem = ({ data }) => {
-  const { id, image, brand, title, desc, price, discount, category } = data;
-  const { cartItems, deleteProduct } = useContext(ShopContext);
+  const { id, image, brand, title, price, discount } = data;
+  const { cartItems, addToCart, removeFromCart, updateCartCountChange } =
+    useContext(ShopContext);
 
-  const disocuntedPrice = price * (discount / 100);
-  const newPrice = price - disocuntedPrice;
+  const discountedPrice = price * (discount / 100);
+  const newPrice = price - discountedPrice;
 
   return (
     <div className="cart-items" key={id}>
@@ -19,17 +20,23 @@ const CartItem = ({ data }) => {
           {brand} - {title}
         </p>
 
-        <p>
-          ${newPrice} x {cartItems[id]}
-        </p>
+        <p>${newPrice}</p>
+      </div>
+
+      <div className="btn-quantity">
+        <button onClick={() => (cartItems[id] > 0 ? removeFromCart(id) : 0)}>
+          -
+        </button>
+        <input
+          type="text"
+          value={cartItems[id]}
+          onChange={(e) => updateCartCountChange(Number(e.target.value), id)}
+        />
+        <button onClick={() => addToCart(id)}>+</button>
       </div>
 
       <div className="cart-price">
-        <p>${newPrice * cartItems[id]}</p>
-      </div>
-
-      <div className="remove-from-cart">
-        <BsTrash className="remove-item" onClick={() => deleteProduct(id)} />
+        <p>${newPrice * cartItems[id]}.00</p>
       </div>
     </div>
   );

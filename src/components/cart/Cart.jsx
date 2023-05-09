@@ -3,29 +3,40 @@ import { PRODUCTS } from "../../Products";
 import { ShopContext } from "../../context/shop-context";
 import { GrClose } from "react-icons/gr";
 import CartItem from "./cart-item";
+import { useNavigate } from "react-router-dom";
 import "./Cart.css";
 
 const Cart = () => {
-  const { cartItems } = useContext(ShopContext);
+  const navigate = useNavigate();
+  const { cartItems, getGrandTotalAmount } = useContext(ShopContext);
+  const totalAmount = getGrandTotalAmount();
 
   return (
     <section className="cart-section">
       <div className="cart-items-modal">
-        <div className="cart-menu">
-          <h1>Your Cart Items</h1>
-          <button className="close-modal">
-            <GrClose className="close-window" />
-          </button>
-        </div>
+        <h1 className={totalAmount === 0 ? "hidden" : ""}>Your Cart Items</h1>
 
         {PRODUCTS.map((product) => {
           if (cartItems[product.id] !== 0) {
             return <CartItem data={product} />;
           }
         })}
-      </div>
 
-      <div className="overlay hidden"></div>
+        {totalAmount > 0 ? (
+          <div className="total-amount">
+            <h2>
+              Total Basket: <span>${totalAmount}</span>
+            </h2>
+            <button onClick={() => navigate("/")}>Continue Shopping</button>
+            <button>Checkout</button>
+          </div>
+        ) : (
+          <div className="total-amount">
+            <h1>Your Cart Is Empty!</h1>
+            <button onClick={() => navigate("/")}>Continue Shopping</button>
+          </div>
+        )}
+      </div>
     </section>
   );
 };
