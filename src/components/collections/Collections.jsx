@@ -1,7 +1,6 @@
 import React from "react";
 import { PRODUCTS } from "../../Products";
 import Products from "../Products";
-import Navbar from "../navbar/Navbar";
 
 const Collections = () => {
   return (
@@ -19,9 +18,6 @@ const Collections = () => {
         return (
           <>
             <Products data={product} />
-            <div style={{ display: "none" }}>
-              <Navbar data={product} />
-            </div>
           </>
         );
       })}

@@ -11,17 +11,17 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar />
-        <div className="App">
-          <ShopContextProvider>
+        <ShopContextProvider>
+          <Navbar />
+          <div className="App">
             <Routes>
               <Route index element={<Collections />} />
               <Route path="about" element={<About />} />
               <Route path="contact" element={<Contact />} />
               <Route path="cart" element={<Cart />} />
             </Routes>
-          </ShopContextProvider>
-        </div>
+          </div>
+        </ShopContextProvider>
       </Router>
     </>
   );
