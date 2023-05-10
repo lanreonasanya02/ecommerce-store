@@ -28,7 +28,7 @@ const Cart = () => {
               Total Basket: <span>${Math.floor(totalAmount)}</span>
             </h2>
             <button onClick={() => navigate("/")}>Continue Shopping</button>
-            <button>Checkout</button>
+            <button className="checkout">Checkout</button>
           </div>
         ) : (
           <div className="total-amount">
@@ -37,6 +37,8 @@ const Cart = () => {
           </div>
         )}
       </div>
+
+      {/* <div className="overlay"></div> */}
     </section>
   );
 };

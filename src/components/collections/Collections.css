@@ -66,15 +66,6 @@ option {
   border-radius: 12px;
 }
 
-.product-card .product-image .thumbnails {
-  margin: 0;
-  padding: 0;
-}
-
-.product-card .product-image .thumbnails img {
-  width: 20%;
-}
-
 .product-card .product-details {
   text-align: left;
   padding: 0 5rem;
@@ -123,7 +114,6 @@ option {
 
 .product-card .product-details .buttons .btn-quantity button {
   border: none;
-  /* background-color: hsl(223, 64%, 98%); */
   padding: 10px 12px;
   color: hsl(26, 100%, 55%);
   font-size: 1rem;
@@ -133,14 +123,12 @@ option {
 input {
   width: 20%;
   text-align: center;
-  /* background-color: hsl(223, 64%, 98%); */
   border: none;
   padding: 12px 0;
   font-weight: bolder;
   outline: none;
 }
 
-/* .flash-sale .product-details .buttons .btn-quantity button, */
 .flash-sale input {
   background: none;
   color: #000;
@@ -158,11 +146,23 @@ input {
   margin-left: 8px;
 }
 
-/* @media (min-width: 1000px) {
-  .product-card {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    align-items: center;
-    padding: 5rem 3rem 0;
+@media (max-width: 576px) {
+  body {
+    margin: 0;
+    padding: 0;
   }
-} */
+
+  .product-card {
+    display: block;
+    padding: 2rem 1rem 0;
+  }
+
+  .product-card .product-details {
+    text-align: center;
+    padding: 0 14px;
+  }
+
+  .product-card .product-details .btn-addtocart button {
+    width: 100%;
+  }
+}

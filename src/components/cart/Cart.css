@@ -62,17 +62,30 @@
   border-style: none;
   padding: 14px 3rem;
   border-radius: 8px;
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 
 .total-amount > button {
   margin-right: 1.5rem;
 }
 
-.total-amount button:hover {
+.total-amount .checkout {
+  background-color: hsl(25, 100%, 94%);
+  color: #3a3939;
+  padding: 14px 5rem;
+  font-weight: bold;
+}
+
+.total-amount > button:hover {
   color: #3a3939;
   background-color: hsl(25, 100%, 94%);
   font-weight: bold;
+}
+
+.total-amount .checkout:hover {
+  color: #fff;
+  background-color: #3a3939;
+  font-weight: normal;
 }
 
 .hidden {
