@@ -135,5 +135,8 @@
     margin: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    width: 70%;
+    padding: 1rem 0;
+    font-size: 1.2rem;
   }
 }
