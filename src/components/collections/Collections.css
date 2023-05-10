@@ -29,20 +29,8 @@ option {
   padding: 3rem 0 0;
 }
 
-.flash-sale .product-details h4 {
-  color: #000;
-  letter-spacing: 3px;
-  font-weight: bolder;
-  font-size: 14px;
-  text-transform: uppercase;
-  animation: animate 1.8s linear infinite;
-  text-align: center;
-}
-
-.flash-sale .product-details .flash {
-  background-color: #565353;
-  padding: 3px 2px;
-  border-radius: 10px;
+.flash-sale > h1 {
+  display: none;
 }
 
 @keyframes animate {
@@ -207,13 +195,30 @@ input {
     background: #fff;
   }
 
-  .flash-sale .product-details h4 {
+  .flash-sale > h1 {
+    display: block;
     color: hsl(26, 100%, 55%);
     letter-spacing: 7px;
     font-weight: bolder;
-    font-size: 1rem;
+    font-size: 14px;
     text-align: center;
     padding: 0 1rem;
+    text-transform: uppercase;
+    animation: animate 1.8s linear infinite;
+
+    @keyframes animate {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.9;
+        color: hsl(26, 100%, 55%);
+      }
+      100% {
+        opacity: 0;
+        color: hsl(25, 100%, 94%);
+      }
+    }
   }
 
   .mobile-quantity-btn button {
