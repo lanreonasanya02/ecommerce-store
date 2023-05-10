@@ -15,7 +15,7 @@ const Products = ({ data }) => {
   return (
     <>
       <div className={discount >= 50 ? "flash-sale" : ""}>
-        {discount >= 50 && <h1>FLASH SALE!!! Discounts more than 50%</h1>}
+        {discount >= 50 && <h1>FLASH SALE!! Discounts more than 50%</h1>}
 
         <div className="product-card">
           <div className="product-image">
@@ -28,6 +28,9 @@ const Products = ({ data }) => {
             <p className="product-description">{desc}</p>
 
             <p className="discountedprice">
+              <span className="mobile-old-price">
+                <del>${price}</del>
+              </span>{" "}
               ${newPrice} <span className="discount">{discount}%</span>
             </p>
 

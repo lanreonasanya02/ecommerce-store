@@ -78,13 +78,10 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+        <div id="overlay"></div>
       </nav>
-
-      <div className="overlay"></div>
     </>
   );
 };
 
 export default Navbar;
-
-// {!!data && cartItems[data.id] > 0} && <>{cartItems[data.id]}</>
