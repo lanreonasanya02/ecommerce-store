@@ -8,8 +8,10 @@ import "./Cart.css";
 
 const Cart = () => {
   const navigate = useNavigate();
-  const { cartItems, getTotal } = useContext(ShopContext);
+  const { cartItems, getTotal, getGrandTotal } = useContext(ShopContext);
   const totalAmount = getTotal();
+  const grandTotal = getGrandTotal();
+  const tax = Math.floor(totalAmount * 0.15);
 
   return (
     <section className="cart-section">
@@ -24,13 +26,24 @@ const Cart = () => {
 
         {totalAmount > 0 ? (
           <div className="total-amount">
-            {/* <div className="sub-total">
-              <h4>Sub-total: ${Math.floor(totalAmount)}</h4>
-              <h4>Tax (15%): {tax}</h4>
-              <h4>Shipping: $20</h4>
-            </div> */}
+            <div className="sub-total">
+              <div className="sub">
+                <p className="sub-property">Sub-total: </p>
+                <p className="sub-value">${Math.floor(totalAmount)}</p>
+              </div>
+
+              <div className="sub">
+                <p className="sub-property">Tax (15%): </p>
+                <p className="sub-value">${tax}</p>
+              </div>
+
+              <div className="sub">
+                <p className="sub-property">Shipping fees: </p>
+                <p className="sub-value">$20</p>
+              </div>
+            </div>
             <h2>
-              Total Basket: <span>${Math.floor(totalAmount)}</span>
+              Total Basket: <span>${Math.floor(grandTotal)}</span>
             </h2>
             <button onClick={() => navigate("/")}>Continue Shopping</button>
             <button className="checkout">Checkout</button>

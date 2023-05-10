@@ -39,6 +39,13 @@ const ShopContextProvider = (props) => {
     return totalBasket;
   };
 
+  const getGrandTotal = () => {
+    const subtotal = getTotal();
+    const tax = subtotal * 0.15;
+    const grandTotal = subtotal + tax + 20;
+    return grandTotal;
+  };
+
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
   };
@@ -58,6 +65,7 @@ const ShopContextProvider = (props) => {
     updateCartCountChange,
     getTotal,
     getTotalBasket,
+    getGrandTotal,
   };
 
   // To define all the states and functions that will be used
