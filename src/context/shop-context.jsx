@@ -15,7 +15,7 @@ const getDefaultCart = () => {
 const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
 
-  const getGrandTotalAmount = () => {
+  const getTotal = () => {
     let totalAmount = 0;
     for (const item in cartItems) {
       if (cartItems[item] > 0) {
@@ -56,7 +56,7 @@ const ShopContextProvider = (props) => {
     addToCart,
     removeFromCart,
     updateCartCountChange,
-    getGrandTotalAmount,
+    getTotal,
     getTotalBasket,
   };
 

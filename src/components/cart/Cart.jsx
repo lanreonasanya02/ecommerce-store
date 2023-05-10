@@ -8,8 +8,8 @@ import "./Cart.css";
 
 const Cart = () => {
   const navigate = useNavigate();
-  const { cartItems, getGrandTotalAmount } = useContext(ShopContext);
-  const totalAmount = getGrandTotalAmount();
+  const { cartItems, getTotal } = useContext(ShopContext);
+  const totalAmount = getTotal();
 
   return (
     <section className="cart-section">
@@ -24,6 +24,11 @@ const Cart = () => {
 
         {totalAmount > 0 ? (
           <div className="total-amount">
+            {/* <div className="sub-total">
+              <h4>Sub-total: ${Math.floor(totalAmount)}</h4>
+              <h4>Tax (15%): {tax}</h4>
+              <h4>Shipping: $20</h4>
+            </div> */}
             <h2>
               Total Basket: <span>${Math.floor(totalAmount)}</span>
             </h2>

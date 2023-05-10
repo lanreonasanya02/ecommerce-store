@@ -22,31 +22,27 @@ option {
 }
 
 .flash-sale {
-  background: linear-gradient(
-    to right,
-    hsla(26, 100%, 55%, 0.8),
-    hsla(25, 100%, 94%, 0.4)
-  );
+  background-color: #fff;
   color: #000;
   border-radius: 8px;
   margin: 3rem 0;
   padding: 3rem 0 0;
 }
 
-.flash-sale > h1 {
-  color: #ff0000;
-  letter-spacing: 10px;
+.flash-sale .product-details h4 {
+  color: #000;
+  letter-spacing: 3px;
   font-weight: bolder;
-  font-size: 1rem;
+  font-size: 14px;
   text-transform: uppercase;
   animation: animate 1.8s linear infinite;
+  text-align: center;
 }
 
-.flash-sale h4 {
-  color: hsl(26, 100%, 55%);
-  font-weight: bolder;
-  letter-spacing: 5px;
-  animation: animate 1.8s linear infinite;
+.flash-sale .product-details .flash {
+  background-color: #565353;
+  padding: 3px 2px;
+  border-radius: 10px;
 }
 
 @keyframes animate {
@@ -55,9 +51,11 @@ option {
   }
   50% {
     opacity: 0.9;
+    color: hsl(26, 100%, 55%);
   }
   100% {
     opacity: 0;
+    color: hsl(25, 100%, 94%);
   }
 }
 
@@ -209,7 +207,7 @@ input {
     background: #fff;
   }
 
-  .flash-sale > h1 {
+  .flash-sale .product-details h4 {
     color: hsl(26, 100%, 55%);
     letter-spacing: 7px;
     font-weight: bolder;

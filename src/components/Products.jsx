@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { BsCart2 } from "react-icons/bs";
 import "./collections/Collections.css";
 import { ShopContext } from "../context/shop-context";
-import Navbar from "./navbar/Navbar";
 
 const Products = ({ data }) => {
   const { id, image, brand, title, desc, price, discount, category } = data;
@@ -15,14 +14,15 @@ const Products = ({ data }) => {
   return (
     <>
       <div className={discount >= 50 ? "flash-sale" : ""}>
-        {discount >= 50 && <h1>FLASH SALE!! Discounts more than 50%</h1>}
-
         <div className="product-card">
           <div className="product-image">
             <img src={image} alt="product-image" />
           </div>
 
           <div className="product-details">
+            {/* <div className="flash">
+              {discount >= 50 && <h4>FLASH SALE!! Discounts more than 50%</h4>}
+            </div> */}
             <p className="product-brand">{brand}</p>
             <h1 className="product-title">{title}</h1>
             <p className="product-description">{desc}</p>
