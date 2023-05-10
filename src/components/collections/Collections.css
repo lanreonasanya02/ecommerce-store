@@ -18,15 +18,13 @@ option {
   display: grid;
   grid-template-columns: 450px 1fr;
   align-items: center;
-  padding: 2rem 3rem 2rem;
+  padding: 5rem 3rem 2rem;
 }
 
 .flash-sale {
   background-color: #fff;
   color: #000;
   border-radius: 8px;
-  margin: 3rem 0;
-  padding: 3rem 0 0;
 }
 
 .flash-sale > h1 {
@@ -193,6 +191,8 @@ input {
 
   .flash-sale {
     background: #fff;
+    margin: 3rem 0;
+    padding: 1rem 0 0;
   }
 
   .flash-sale > h1 {
