@@ -37,8 +37,6 @@ const Cart = () => {
           </div>
         )}
       </div>
-
-      {/* <div className="overlay"></div> */}
     </section>
   );
 };

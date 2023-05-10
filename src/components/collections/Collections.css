@@ -111,12 +111,13 @@ option {
   background: none;
 }
 
-.product-card .product-details .buttons .btn-quantity button {
+.desktop-quantity-btn button {
   border: none;
   padding: 10px 12px;
   color: hsl(26, 100%, 55%);
-  font-size: 1rem;
-  font-weight: bolder;
+  font-size: 1.2rem;
+  /* font-weight: bolder; */
+  background-color: #fff;
 }
 
 .mobile-quantity-btn {
@@ -216,11 +217,12 @@ input {
     padding: 0 1rem;
   }
 
-  .product-card .product-details .buttons .btn-quantity button {
+  .mobile-quantity-btn button {
     border: none;
     padding: 10px 12px;
     color: hsl(26, 100%, 55%);
-    font-size: 1rem;
-    font-weight: bolder;
+    font-size: 1.2rem;
+    /* font-weight: bolder; */
+    background-color: #fff;
   }
 }
