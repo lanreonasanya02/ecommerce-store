@@ -131,6 +131,7 @@ input {
   padding: 12px 0;
   font-weight: bolder;
   outline: none;
+  font-size: 1rem;
 }
 
 .flash-sale input {
