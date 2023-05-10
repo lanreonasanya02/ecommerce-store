@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { PRODUCTS } from "../../Products";
 import Products from "../Products";
 
 const Collections = () => {
+  // Scroll To top
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <>
       <div className="filter">

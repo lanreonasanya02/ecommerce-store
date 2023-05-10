@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { PRODUCTS } from "../../Products";
 import { ShopContext } from "../../context/shop-context";
 import { GrClose } from "react-icons/gr";
@@ -12,6 +12,11 @@ const Cart = () => {
   const totalAmount = getTotal();
   const grandTotal = getGrandTotal();
   const tax = Math.floor(totalAmount * 0.15);
+
+  // Scroll To top
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
 
   return (
     <section className="cart-section">
