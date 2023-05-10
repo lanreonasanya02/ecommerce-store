@@ -119,6 +119,10 @@ option {
   font-weight: bolder;
 }
 
+.mobile-quantity-btn {
+  display: none;
+}
+
 input {
   width: 20%;
   text-align: center;
@@ -177,6 +181,14 @@ input {
     display: none;
   }
 
+  .mobile-quantity-btn {
+    display: inline;
+  }
+
+  .desktop-quantity-btn {
+    display: none;
+  }
+
   .product-card .product-details .btn-addtocart button {
     display: block;
     width: 70%;
@@ -202,5 +214,13 @@ input {
     font-size: 1rem;
     text-align: center;
     padding: 0 1rem;
+  }
+
+  .product-card .product-details .buttons .btn-quantity button {
+    border: none;
+    padding: 10px 12px;
+    color: hsl(26, 100%, 55%);
+    font-size: 1rem;
+    font-weight: bolder;
   }
 }

@@ -83,6 +83,7 @@ nav .navbar-cart .cart-basket {
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 1.5rem; /* Place content 60px from the top */
     transition: 0.3s; /* 0.5 second transition effect to slide in the sidenav */
+    box-shadow: 0 7rem 9rem rgba(0, 0, 0, 0.9);
     /* animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0); */
   }
 

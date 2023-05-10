@@ -22,7 +22,7 @@ const CartItem = ({ data }) => {
 
         <p>${newPrice}</p>
 
-        <div className="btn-quantity">
+        <div className="btn-quantity mobile-quantity-btn">
           <button onClick={() => (cartItems[id] > 0 ? removeFromCart(id) : 0)}>
             -
           </button>
@@ -33,6 +33,18 @@ const CartItem = ({ data }) => {
           />
           <button onClick={() => addToCart(id)}>+</button>
         </div>
+      </div>
+
+      <div className="btn-quantity desktop-quantity-btn">
+        <button onClick={() => (cartItems[id] > 0 ? removeFromCart(id) : 0)}>
+          -
+        </button>
+        <input
+          type="text"
+          value={cartItems[id]}
+          onChange={(e) => updateCartCountChange(Number(e.target.value), id)}
+        />
+        <button onClick={() => addToCart(id)}>+</button>
       </div>
 
       <div className="cart-price">
