@@ -42,7 +42,7 @@ export const PRODUCTS = [
 
   {
     id: 4,
-    image: sneaker4,
+    image: sneaker6,
     brand: "Broxxx Co.",
     title: "Sply-350 Active Sneakers",
     desc: "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.",
@@ -64,7 +64,7 @@ export const PRODUCTS = [
 
   {
     id: 6,
-    image: sneaker6,
+    image: sneaker4,
     brand: "Nike",
     title: "Air Jordan Fluffy Active Sneakers",
     desc: "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.",
